@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ADS GROWTH - Dashboard 2026</title>
-    <!-- Tailwind CDN para garantir que o layout funcione instantaneamente no preview -->
+    <!-- Tailwind CDN para o preview não quebrar enquanto você edita -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -31,24 +31,7 @@
         }
       }
     </script>
-    <style type="text/tailwindcss">
-      @layer base {
-        body {
-          @apply bg-[#050508] text-slate-200;
-          font-family: 'Inter', sans-serif;
-        }
-      }
-      @layer components {
-        .bg-gradient-brand {
-          background: radial-gradient(circle at top right, rgba(29, 144, 255, 0.08), transparent 40%),
-                      radial-gradient(circle at bottom left, rgba(29, 144, 255, 0.05), transparent 40%);
-        }
-        .shadow-glow {
-          box-shadow: 0 0 15px currentColor;
-        }
-      }
-    </style>
-    <!-- ImportMap para resolução de módulos no navegador -->
+    <!-- ImportMap para resolução de módulos -->
     <script type="importmap">
 {
   "imports": {

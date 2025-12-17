@@ -5,6 +5,29 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
+@layer base {
+  body {
+    background-color: #050508;
+    color: #f1f5f9;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+    @apply bg-[#050508] text-slate-200;
+  }
+}
+
+@layer components {
+  .bg-gradient-brand {
+    background: radial-gradient(circle at top right, rgba(29, 144, 255, 0.08), transparent 40%),
+                radial-gradient(circle at bottom left, rgba(29, 144, 255, 0.05), transparent 40%);
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 15px currentColor;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -18,24 +41,6 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #334155; 
-}
-
-body {
-  background-color: #050508;
-  color: #f1f5f9;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  font-family: 'Inter', sans-serif;
-}
-
-.bg-gradient-brand {
-  background: radial-gradient(circle at top right, rgba(29, 144, 255, 0.08), transparent 40%),
-              radial-gradient(circle at bottom left, rgba(29, 144, 255, 0.05), transparent 40%);
-}
-
-.shadow-glow {
-  box-shadow: 0 0 15px currentColor;
 }
 
 /* Markdown Chat Styles */
