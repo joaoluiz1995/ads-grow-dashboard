@@ -1,0 +1,70 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050508; 
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155; 
+}
+
+body {
+  background-color: #050508;
+  color: #f1f5f9;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.bg-gradient-brand {
+  background: radial-gradient(circle at top right, rgba(29, 144, 255, 0.08), transparent 40%),
+              radial-gradient(circle at bottom left, rgba(29, 144, 255, 0.05), transparent 40%);
+}
+
+.shadow-glow {
+  box-shadow: 0 0 15px currentColor;
+}
+
+/* Markdown Chat Styles */
+.prose-chat h1, .prose-chat h2, .prose-chat h3 {
+  color: #1d90ff;
+  font-weight: 800;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.prose-chat strong {
+  color: #fff;
+  font-weight: 800;
+}
+.prose-chat ul, .prose-chat ol {
+  margin-left: 1.25rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  list-style-type: disc;
+}
+.prose-chat li {
+  margin-bottom: 0.25rem;
+}
+.prose-chat code {
+  background: rgba(29, 144, 255, 0.1);
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+  color: #1d90ff;
+  font-family: monospace;
+}
