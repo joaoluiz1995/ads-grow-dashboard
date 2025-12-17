@@ -11,16 +11,20 @@
         theme: {
           extend: {
             colors: {
-              background: '#0B0B15',
-              surface: '#121223',
-              primary: '#6366f1',
-              secondary: '#06b6d4',
-              accent: '#8b5cf6',
+              background: '#050508',
+              surface: '#0d0d1a',
+              brand: {
+                blue: '#1d90ff', // O azul da logo
+                dark: '#0a192f',
+              },
+              primary: '#1d90ff',
+              secondary: '#ffffff',
+              accent: '#1d90ff',
             },
             boxShadow: {
-              'neon': '0 0 10px rgba(6, 182, 212, 0.5), 0 0 20px rgba(6, 182, 212, 0.3)',
-              'card': '0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3)',
-              'glow': '0 0 15px rgba(99, 102, 241, 0.4)'
+              'neon': '0 0 15px rgba(29, 144, 255, 0.4), 0 0 30px rgba(29, 144, 255, 0.2)',
+              'card': '0 10px 30px -10px rgba(0, 0, 0, 0.7)',
+              'glow': '0 0 20px rgba(29, 144, 255, 0.3)'
             },
             fontFamily: {
               sans: ['Inter', 'sans-serif'],
@@ -37,24 +41,59 @@
         height: 6px;
       }
       ::-webkit-scrollbar-track {
-        background: #0f0f1a; 
+        background: #050508; 
       }
       ::-webkit-scrollbar-thumb {
-        background: #334155; 
+        background: #1e293b; 
         border-radius: 10px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #475569; 
+        background: #334155; 
       }
       body {
-        background-color: #0B0B15;
-        color: #e2e8f0;
+        background-color: #050508;
+        color: #f1f5f9;
         margin: 0;
         padding: 0;
         overflow-x: hidden;
       }
+      .bg-gradient-brand {
+        background: radial-gradient(circle at top right, rgba(29, 144, 255, 0.08), transparent 40%),
+                    radial-gradient(circle at bottom left, rgba(29, 144, 255, 0.05), transparent 40%);
+      }
       .shadow-glow {
         box-shadow: 0 0 15px currentColor;
+      }
+      
+      /* Markdown Chat Styles */
+      .prose-chat h1, .prose-chat h2, .prose-chat h3 {
+        color: #1d90ff;
+        font-weight: 800;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .prose-chat strong {
+        color: #fff;
+        font-weight: 800;
+      }
+      .prose-chat ul, .prose-chat ol {
+        margin-left: 1.25rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        list-style-type: disc;
+      }
+      .prose-chat li {
+        margin-bottom: 0.25rem;
+      }
+      .prose-chat code {
+        background: rgba(29, 144, 255, 0.1);
+        padding: 0.1rem 0.3rem;
+        border-radius: 4px;
+        color: #1d90ff;
+        font-family: monospace;
       }
     </style>
   <script type="importmap">
@@ -66,12 +105,14 @@
     "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
     "recharts": "https://esm.sh/recharts@^3.6.0",
     "vite": "https://esm.sh/vite@^7.3.0",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "react-markdown": "https://esm.sh/react-markdown@^9.0.0"
   }
 }
 </script>
 </head>
-  <body>
+  <body class="bg-gradient-brand">
     <div id="root"></div>
     <script type="module" src="./index.tsx"></script>
   </body>

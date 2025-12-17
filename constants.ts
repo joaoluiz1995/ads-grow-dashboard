@@ -1,3 +1,4 @@
+
 export interface MonthlyData {
   month: string;
   revenue: number;
@@ -25,7 +26,7 @@ export const SCENARIOS: ProjectionScenario[] = [
     leads: '7.5k',
     ticket: 'R$ 430',
     dailyGoal: 'R$ 11.465,60',
-    color: '#06b6d4', // Cyan
+    color: '#1d90ff', // Azul da Logo ADS GROW
     data: [
       { month: 'Jan', revenue: 240777.60 },
       { month: 'Fev', revenue: 206380.80 },
